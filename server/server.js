@@ -9,13 +9,7 @@ const app=express();
 
 /***app middlewares */ 
 app.use(morgan('tiny'))
-app.use(cors(
-     {
-        origin: ["https://quiz-application-frontend.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors());
 app.use(express.json()); //informing express that we are using json format
 config(); //used to load environment variables from a .env file into the Node.js runtime environment
 

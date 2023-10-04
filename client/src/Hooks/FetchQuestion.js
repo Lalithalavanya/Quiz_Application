@@ -17,7 +17,7 @@ function useFetchQuestion(){
     async function fun(){
          try {
             // let questions =await data; //The data variable should be a promise or an asynchronous operation that returns a promise. When you await it, the function will pause and wait for the promise to resolve. Once the promise is resolved, the result will be assigned to the question variable.
-            const [{questions,answers}]=await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`,(data)=>data);
+            const [{questions,answers}]=await getServerData('quiz-application-api.vercel.app/api/questions',(data)=>data);
             //  const q = await getServerData('http://localhost:5000/api/questions', (data) => data)
             //   console.log(process.env.REACT_APP_SERVER_HOSTNAME);
             //  console.log({questions,answers})

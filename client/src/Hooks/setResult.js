@@ -34,7 +34,7 @@ export const usePublishResult = (resultData) => {
     const { result, username } = resultData;
     (async () => {
         try {
-            if(result?!.length!==0 && !username) throw new Error("Couldn't get Result");
+            if(result?!.length!=0 && !username) throw new Error("Couldn't get Result");
             await postServerData('https://quiz-application-api.vercel.app/api/result', resultData, data => data)
         } catch (error) {
             console.log(error)
